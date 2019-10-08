@@ -4,6 +4,9 @@
 ### How to map vpc name by mathcing environment variable? 
 ### How to map security group name by mathcing environment variable? 
 
+Some ideas are described at below blog, but some are different.
+https://blog.gruntwork.io/how-to-manage-terraform-state-28f5697e68fa
+
 
 Step1: Define VPC variable as map like my_aws_resource_vpc_existing
 ```
