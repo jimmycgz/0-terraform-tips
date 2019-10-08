@@ -1,5 +1,10 @@
 ## How to add resouces to existing VPC or how to update existing resource?
 
+### how to map resource values by matching environment variable?
+### How to map vpc name by mathcing environment variable? 
+### How to map security group name by mathcing environment variable? 
+
+
 Step1: Define VPC variable as map like my_aws_resource_vpc_existing
 ```
 variable "my_aws_resource_vpc_existing" {
