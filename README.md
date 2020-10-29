@@ -66,7 +66,7 @@ Symptom: It shows below error although Terraform installer already configured in
 Resolution: Install and run Terraform in another EC2.
   
 ## * Terraform has a defect that it doesn't keep the state for some resources, which only run one time at begining.
-  Resolution: These non-state provisioner resources are: file, local-exec and remote-exec. Suessfully done this via resource "null_resource" "rerun" and use uuid as trigger , find this section at the bottom of the terraform_main.tf file. Use uuid as trigger so Terraform will run the non-state provisioner in this group for each run.
+  Resolution: These non-state provisioner resources are: file, local-exec and remote-exec. Suessfully done this via resource "null_resource" "rerun" and use uuid as trigger , find this section at the bottom of the file https://github.com/jimmycgz/iac-infrastructure-as-code/blob/master/terraform_main.tf. Use uuid as trigger so Terraform will run the non-state provisioner in this group for each run.
   
 ## * Can't bootstrap by neither remote-exec or run a .sh file in the new instance.
   Resolution: Used my own AMI with the API pre-configured, then user Terraform remote-exec to update the ip address of API3-GCP into the Json config file of API1-AWS.
