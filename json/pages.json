@@ -1,0 +1,36 @@
+{
+  "query": {
+    "pages": [
+      {
+        "TOC": {
+          "pageid": 0,
+          "title": "TOC",
+          "extract": "Table of Content"
+        }
+      },
+      {
+        "Pre-face": {
+          "pageid": 0,
+          "title": "Pre-face",
+          "extract": "Nice word on Pre-face"
+        }
+      },
+      {
+        "21721040": {
+          "pageid": 21721040,
+          "title": "Python",
+          "extract": "Something about Python"
+        }
+      },
+              
+      {
+        "21721041": {
+          "pageid": 21721041,
+          "title": "Java",
+          "extract": "A great place to learn about Java"
+        }
+      }
+    ]
+  }
+}
+
