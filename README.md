@@ -56,7 +56,9 @@ ami = "${lookup(var.amis, "${var.server_names[count.index]}")}"  # Find the valu
 ## * How to alternatively pick up items from a list ?
 ```
 subnet_id= "${element(aws_subnet.my-pub-subnet.*.id, 0)}" #pick up the first subnet (Item 0)
-subnet_id = "${element(aws_subnet.my-pub-subnet.*.id, count.index)}" #pick up sequency will be Item 0, 1, 0, 1 if count =2, or Item 0,1,2,0,1,2 if count=3
+subnet_id = "${element(aws_subnet.my-pub-subnet.*.id, count.index)}" 
+# pick up sequency will be Item 0, 1, 0, 1 if count =2, 
+# or Item 0,1,2,0,1,2 if count=3
 
 ```
 
