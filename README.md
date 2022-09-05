@@ -1,6 +1,13 @@
 # terraform-best-practices
 My collections for tips, know hows, issue with solutions for Terraform
 
+## Terraform for GCP modules
+https://github.com/terraform-google-modules
+
+## Terraform for AWS modules
+* All AWS Snippets from Hasicorp
+[Terraform AWS Provider](https://github.com/hashicorp/terraform-provider-aws)
+
 # Tips (How Tos of Terraform)
 
 ## How to add resouces to existing VPC or how to update existing resource?
@@ -63,19 +70,19 @@ Symptom: It shows below error although Terraform installer already configured in
 /var/jenkins_home/workspace/infra-as-code/deployment-poc@tmp/durable-8622f3f6/script.sh: 2: /var/jenkins_home/workspace/infra-as-code/deployment-poc@tmp/durable-8622f3f6/script.sh: def: not found
 ```
 
-Resolution: Install and run Terraform in another EC2.
+**Resolution**: Install and run Terraform in another EC2.
   
 ## * Terraform has a defect that it doesn't keep the state for some resources, which only run one time at begining.
-  Resolution: These non-state provisioner resources are: file, local-exec and remote-exec. Suessfully done this via resource "null_resource" "rerun" and use uuid as trigger , find this section at the bottom of the file https://github.com/jimmycgz/iac-infrastructure-as-code/blob/master/terraform_main.tf. Use uuid as trigger so Terraform will run the non-state provisioner in this group for each run.
+  **Resolution**: These non-state provisioner resources are: file, local-exec and remote-exec. Suessfully done this via resource "null_resource" "rerun" and use uuid as trigger , find this section at the bottom of the file https://github.com/jimmycgz/iac-infrastructure-as-code/blob/master/terraform_main.tf. Use uuid as trigger so Terraform will run the non-state provisioner in this group for each run.
   
 ## * Can't bootstrap by neither remote-exec or run a .sh file in the new instance.
-  Resolution: Used my own AMI with the API pre-configured, then user Terraform remote-exec to update the ip address of API3-GCP into the Json config file of API1-AWS.
+  **Resolution**: Used my own AMI with the API pre-configured, then user Terraform remote-exec to update the ip address of API3-GCP into the Json config file of API1-AWS.
   
 ## * How to add a quate (") to a txt file by echo in Terraform? like  command="echo "IP_add=": >IP.txt",
-  Resolution: use the combination of (\") and (') like command="echo ' \"IP_add=\":' >IP.txt". Can also pupolate the content by Terraform local_file with EOF sign.
+  **Resolution**: use the combination of (\") and (') like command="echo ' \"IP_add=\":' >IP.txt". Can also pupolate the content by Terraform local_file with EOF sign.
   
 ## * Can't associate one IGW to multiple subnets, Terraform seems only associate it to the last one in resource IGW_asso
-  Resolution: use count to associate every subnet to IGW.
+  **Resolution**: use count to associate every subnet to IGW.
    
   
 
